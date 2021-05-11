@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Models",
+      "appliesTo": "BackendProject/BackendProject/Models/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-BackendProject",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}

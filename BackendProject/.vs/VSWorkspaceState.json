@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BackendProject",
+    "\\BackendProject\\bin",
+    "\\BackendProject\\bin\\Debug",
+    "\\BackendProject\\bin\\Debug\\netcoreapp3.1",
+    "\\BackendProject\\bin\\Debug\\netcoreapp3.1\\zh-Hant",
+    "\\BackendProject\\Controllers",
+    "\\BackendProject\\DAL",
+    "\\BackendProject\\Views",
+    "\\BackendProject\\Views\\Home"
+  ],
+  "SelectedNode": "\\BackendProject",
+  "PreviewInSolutionExplorer": false
+}
