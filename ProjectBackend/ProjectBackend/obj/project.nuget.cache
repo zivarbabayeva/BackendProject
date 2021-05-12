@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ahOIQ9OXcyZDIzBUMLvYbjvVNMRNBQYeZCRa4nISVW/7FrsIHR5hYDzlxeUTsJE7VHbAVfPrws5+F/lXKfRRjQ==",
+  "dgSpecHash": "r7zmXNdH/xyA3M6wMC2dT4ZwYP5OSyaggceK7wwrD+8dT9bvYruIvdfyp/A1UaJztFUKx3Jw/SOTLfwOQ/Qzmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LEGION\\source\\repos\\ProjectBackend\\ProjectBackend\\ProjectBackend.csproj",
+  "projectFilePath": "C:\\Users\\LEGION\\Desktop\\BackendProject\\ProjectBackend\\ProjectBackend\\ProjectBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LEGION\\source\\repos\\ProjectBackend\\ProjectBackend\\ProjectBackend.csproj": {}
+    "C:\\Users\\LEGION\\Desktop\\BackendProject\\ProjectBackend\\ProjectBackend\\ProjectBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LEGION\\source\\repos\\ProjectBackend\\ProjectBackend\\ProjectBackend.csproj": {
+    "C:\\Users\\LEGION\\Desktop\\BackendProject\\ProjectBackend\\ProjectBackend\\ProjectBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LEGION\\source\\repos\\ProjectBackend\\ProjectBackend\\ProjectBackend.csproj",
+        "projectUniqueName": "C:\\Users\\LEGION\\Desktop\\BackendProject\\ProjectBackend\\ProjectBackend\\ProjectBackend.csproj",
         "projectName": "ProjectBackend",
-        "projectPath": "C:\\Users\\LEGION\\source\\repos\\ProjectBackend\\ProjectBackend\\ProjectBackend.csproj",
+        "projectPath": "C:\\Users\\LEGION\\Desktop\\BackendProject\\ProjectBackend\\ProjectBackend\\ProjectBackend.csproj",
         "packagesPath": "C:\\Users\\LEGION\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LEGION\\source\\repos\\ProjectBackend\\ProjectBackend\\obj\\",
+        "outputPath": "C:\\Users\\LEGION\\Desktop\\BackendProject\\ProjectBackend\\ProjectBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

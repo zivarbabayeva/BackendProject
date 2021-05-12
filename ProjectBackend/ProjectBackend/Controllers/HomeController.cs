@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjectBackend.DAL;
+using ProjectBackend.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +17,13 @@ namespace ProjectBackend.Controllers
         }
         public IActionResult Index()
         {
+            HomeVM homeVM = new HomeVM
+            {
+                Sliders = _context.Sliders.ToList(),
+                Caption = _context.Captions.FirstOrDefault()
+            };
           
-            return View(_context.Homes.ToList());
+            return View(homeVM);
         }
     }
 }
