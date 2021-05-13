@@ -10,17 +10,19 @@ namespace ProjectBackend.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly AppDbContext _context;
-        public HomeController(AppDbContext context)
+        private readonly AppDbContext _db;
+        public HomeController(AppDbContext db)
         {
-            _context = context;
+            _db = db;
         }
-        public IActionResult Index()
+
+        public async Task<IActionResult> Index()
         {
             HomeVM homeVM = new HomeVM
             {
-                Sliders = _context.Sliders.ToList(),
-                Caption = _context.Captions.FirstOrDefault()
+                Sliders = _db.Sliders.ToList(),
+                NoticeBoards = _db.NoticeBoards.ToList(),
+       
             };
           
             return View(homeVM);

@@ -13,7 +13,7 @@ namespace ProjectBackend.DAL
         { }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Caption> Captions { get; set; }
-
+        public DbSet<NoticeBoard> NoticeBoards { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<Blog> Blogs { get; set; }

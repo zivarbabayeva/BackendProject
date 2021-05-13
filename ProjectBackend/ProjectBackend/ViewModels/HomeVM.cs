@@ -10,5 +10,6 @@ namespace ProjectBackend.ViewModel
     {
         public List<Slider> Sliders { get; set; }
         public Caption Caption { get; set; }
+        public List<NoticeBoard> NoticeBoards { get; set; }
     }
 }
