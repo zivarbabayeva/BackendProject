@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace ProjectBackend.Models
 {
-    public class Slider
+    public class CoursesOffer
     {
         public int Id { get; set; }
         [Required]
-        [MaxLength(100)]
-        public string Title { get; set; }
+        [MaxLength(250)]
+        public string ImageUrl { get; set; }
         [Required]
         [MaxLength(250)]
-        public string Description { get; set; }
-
+        public string SubTitle { get; set; }
         [Required]
-        [MaxLength(100)]
-        public string ImageUrl { get; set; }
+        [MaxLength(500)]
+        public string Description { get; set; }
+     
     }
 }

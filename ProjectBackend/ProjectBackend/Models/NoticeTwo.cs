@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace ProjectBackend.Models
 {
-    public class CourseCategory
+    public class NoticeTwo
     {
         public int Id { get; set; }
         [Required]
-        [MaxLength(50)]
-        public string Name { get; set; }
-        public List<Courses> Courses { get; set; }
+        [MaxLength(100)]
+        public string Title { get; set; }
+        [Required]
+        [MaxLength(250)]
+        public string Description { get; set; }
+
     }
 }

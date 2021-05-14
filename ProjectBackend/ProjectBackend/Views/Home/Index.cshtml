@@ -1,15 +1,16 @@
 ﻿@model HomeVM
 @{
     ViewData["Title"] = "Index";
+  
 }
 <!-- Background Area Start -->
 <section id="slider-container" class="slider-area">
     <div class="slider-owl owl-theme owl-carousel">
         <!-- Start Slingle Slide -->
-        @foreach (Slider slide in Model.Sliders)
+        @foreach (Slider slider in Model.Sliders)
         {
         <div>
-            <div class="single-slide item" style="background-image: url(/img/slider/@slide.ImageUrl)">
+            <div class="single-slide item" style="background-image: url(/img/slider/@slider.ImageUrl)">
                 <!-- Start Slider Content -->
                 <div class="slider-content-area">
                     <div class="container">
@@ -17,8 +18,8 @@
                             <div class="col-md-7 col-md-offset-left-5">
                                 <div class="slide-content-wrapper">
                                     <div class="slide-content">
-                                        <h2>@Html.Raw(Model.Caption.Title)</h2>
-                                        <p>@Model.Caption.Description</p>
+                                        @Html.Raw(slider.Title)
+                                        <p>@slider.Description</p>
                                         <a class="default-btn" href="@Url.Action("Index","About")">Learn more</a>
                                     </div>
                                 </div>
@@ -41,64 +42,22 @@
                         <h3>Notice board</h3>
                         @foreach (NoticeBoard notice in Model.NoticeBoards)    
                         {
-                            <div class="single-notice-left mb-25 pb-25">
-                                <h4>@notice.CreatedDate.ToString()</h4>
-                                <p>@notice.Description</p>
-                            </div>
+                    <div class="single-notice-left mb-25 pb-25">
+                        <h4>@notice.CreatedDate</h4>
+                        <p>@notice.Description</p>
+                    </div>
                         }
-
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>5 June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>4 June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left pb-75">
-                            <h4>3 June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>5 June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>4 June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left pb-70">
-                            <h4>3, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>5, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>4, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left pb-70">
-                            <h4>3, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="notice-right">
+                        @foreach (NoticeTwo noticetwo in Model.NoticeTwos)
+                        {
                         <div class="single-notice-right mb-25 pb-25">
-                            <h3>PROFESSIONAL TEACHER</h3>
-                            <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
+                            @Html.Raw(noticetwo.Title)
+                            <p>@noticetwo.Description</p>
                         </div>
-                        <div class="single-notice-right mb-25 pb-25">
-                            <h3>Online courses</h3>
-                            <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
-                        </div>
-                        <div class="single-notice-right">
-                            <h3>easy to addmission</h3>
-                            <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
-                        </div>
+                        }
                     </div>
                 </div>
             </div>
@@ -111,10 +70,11 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-left-4 col-sm-8 col-md-offset-left-4">
                     <div class="choose-content text-left">
-                        <h2>WHY YOU CHOOSE EDUHOME ?</h2>
-                        <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings  the master-builder of humanit happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because. </p>
-                        <p class="choose-option">I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings  the master-builder. </p>
-                        <a class="default-btn" href="course-details.html">view courses</a>
+                        <h2>@Model.WhyChooses.Title</h2>
+                        <h3>@Model.WhyChooses.Description</h3>
+                   
+                       
+                        <a class="default-btn" asp-controller="courses" asp-action="detail">view courses</a>
                     </div>
                 </div>
             </div>
@@ -133,6 +93,7 @@
                 </div>
             </div>
             <div class="row">
+      
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-course">
                         <div class="course-img">

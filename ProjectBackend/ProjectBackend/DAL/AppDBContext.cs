@@ -14,10 +14,13 @@ namespace ProjectBackend.DAL
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Caption> Captions { get; set; }
         public DbSet<NoticeBoard> NoticeBoards { get; set; }
+        public DbSet<NoticeTwo> NoticeTwos { get; set; }
+        public DbSet<WhyChoose> WhyChooses { get; set; }
+        public DbSet<UpcomingEvents> UpcomingEvents { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<Blog> Blogs { get; set; }
-        public DbSet<CourseCategory> CourseCategories { get; set; }
+        public DbSet<CoursesOffer> CourseCategories { get; set; }
         public DbSet<Courses> Courses { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Home> Homes { get; set; }

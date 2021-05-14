@@ -22,6 +22,9 @@ namespace ProjectBackend.Controllers
             {
                 Sliders = _db.Sliders.ToList(),
                 NoticeBoards = _db.NoticeBoards.ToList(),
+                NoticeTwos= _db.NoticeTwos.ToList(),
+                WhyChooses= _db.WhyChooses.FirstOrDefault(),
+                UpcomingEvents= _db.UpcomingEvents.ToList()
        
             };
           

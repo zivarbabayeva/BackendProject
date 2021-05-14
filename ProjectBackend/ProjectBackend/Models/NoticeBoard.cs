@@ -10,11 +10,8 @@ namespace ProjectBackend.Models
     {
         public int Id { get; set; }
         [Required]
-        [MaxLength(100)]
-        public string Title { get; set; }
-        [Required]
         [MaxLength(50)]
-        public string CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; }
         [Required]
         [MaxLength(250)]
         public string Description { get; set; }

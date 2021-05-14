@@ -6,18 +6,22 @@ using System.Threading.Tasks;
 
 namespace ProjectBackend.Models
 {
-    public class Slider
+    public class UpcomingEvents
     {
         public int Id { get; set; }
         [Required]
-        [MaxLength(100)]
-        public string Title { get; set; }
+        [MaxLength(200)]
+        public DateTime Date { get; set; }
         [Required]
         [MaxLength(250)]
-        public string Description { get; set; }
+        public string Title { get; set; }
 
         [Required]
-        [MaxLength(100)]
-        public string ImageUrl { get; set; }
+        [MaxLength(350)]
+        public DateTime StartEndTime { get; set; }
+        [Required]
+        [MaxLength(350)]
+        public string Venue { get; set; }
+
     }
 }
