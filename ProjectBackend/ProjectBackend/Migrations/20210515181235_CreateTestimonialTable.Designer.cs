@@ -10,8 +10,8 @@ using ProjectBackend.DAL;
 namespace ProjectBackend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210514124933_CreateNoticeTwoTable")]
-    partial class CreateNoticeTwoTable
+    [Migration("20210515181235_CreateTestimonialTable")]
+    partial class CreateTestimonialTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -128,23 +128,6 @@ namespace ProjectBackend.Migrations
                     b.ToTable("Captions");
                 });
 
-            modelBuilder.Entity("ProjectBackend.Models.CourseCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CourseCategories");
-                });
-
             modelBuilder.Entity("ProjectBackend.Models.Courses", b =>
                 {
                     b.Property<int>("Id")
@@ -171,9 +154,6 @@ namespace ProjectBackend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(20)")
                         .HasMaxLength(20);
-
-                    b.Property<int?>("CourseCategoryId")
-                        .HasColumnType("int");
 
                     b.Property<int>("CourseFee")
                         .HasColumnType("int");
@@ -218,9 +198,34 @@ namespace ProjectBackend.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CourseCategoryId");
-
                     b.ToTable("Courses");
+                });
+
+            modelBuilder.Entity("ProjectBackend.Models.CoursesOffer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("SubTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CoursesOffers");
                 });
 
             modelBuilder.Entity("ProjectBackend.Models.Event", b =>
@@ -310,6 +315,28 @@ namespace ProjectBackend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("NoticeBoards");
+                });
+
+            modelBuilder.Entity("ProjectBackend.Models.NoticeTwo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NoticeTwos");
                 });
 
             modelBuilder.Entity("ProjectBackend.Models.Slider", b =>
@@ -436,18 +463,95 @@ namespace ProjectBackend.Migrations
                     b.ToTable("TeacherSpecialities");
                 });
 
+            modelBuilder.Entity("ProjectBackend.Models.Testimonial", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(300)")
+                        .HasMaxLength(300);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Pozition")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Testimonial");
+                });
+
+            modelBuilder.Entity("ProjectBackend.Models.Upcomming", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("During")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("SubTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("Venue")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Upcomming");
+                });
+
+            modelBuilder.Entity("ProjectBackend.Models.WhyChoose", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("WhyChooses");
+                });
+
             modelBuilder.Entity("ProjectBackend.Models.Blog", b =>
                 {
                     b.HasOne("ProjectBackend.Models.BlogCategory", null)
                         .WithMany("Blogs")
                         .HasForeignKey("BlogCategoryId");
-                });
-
-            modelBuilder.Entity("ProjectBackend.Models.Courses", b =>
-                {
-                    b.HasOne("ProjectBackend.Models.CourseCategory", null)
-                        .WithMany("Courses")
-                        .HasForeignKey("CourseCategoryId");
                 });
 
             modelBuilder.Entity("ProjectBackend.Models.Teacher", b =>

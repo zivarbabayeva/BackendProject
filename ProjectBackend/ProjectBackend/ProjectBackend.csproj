@@ -5,12 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20210514143919_CreateTableWhyChooses.cs" />
-    <Compile Remove="Migrations\20210514143919_CreateTableWhyChooses.Designer.cs" />
-    <Compile Remove="Migrations\20210514184528_CreateCoursesOfferTable.cs" />
-    <Compile Remove="Migrations\20210514184528_CreateCoursesOfferTable.Designer.cs" />
-    <Compile Remove="Migrations\20210514184811_CreateCoursesOfferTable.cs" />
-    <Compile Remove="Migrations\20210514184811_CreateCoursesOfferTable.Designer.cs" />
+    <Compile Remove="Migrations\20210515135057_CreateManyTables.cs" />
+    <Compile Remove="Migrations\20210515135057_CreateManyTables.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

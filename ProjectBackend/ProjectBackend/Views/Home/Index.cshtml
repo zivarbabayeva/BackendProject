@@ -163,8 +163,15 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="single-event mb-35">
+                        @foreach (var upcomming in Model.Upcomming.Take(4))
+                        {
+
+                        }
+                        {
+
+                        }
                         <div class="event-date">
-                            <h3><a href="event-details.html">20 <span>June</span></a></h3>
+                            <h3>@Html.Raw(Upcomming.Date)</h3>
                         </div>
                         <div class="event-content text-left">
                             <div class="event-content-left">

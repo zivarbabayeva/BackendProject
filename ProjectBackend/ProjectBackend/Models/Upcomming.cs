@@ -6,21 +6,18 @@ using System.Threading.Tasks;
 
 namespace ProjectBackend.Models
 {
-    public class UpcomingEvents
+    public class Upcomming
     {
         public int Id { get; set; }
-        [Required]
-        [MaxLength(200)]
-        public DateTime Date { get; set; }
+    public DateTime Date { get; set; }
         [Required]
         [MaxLength(250)]
-        public string Title { get; set; }
-
+        public string SubTitle { get; set; }
         [Required]
-        [MaxLength(350)]
-        public DateTime StartEndTime { get; set; }
+        [MaxLength(250)]
+        public string During { get; set; }
         [Required]
-        [MaxLength(350)]
+        [MaxLength(250)]
         public string Venue { get; set; }
 
     }

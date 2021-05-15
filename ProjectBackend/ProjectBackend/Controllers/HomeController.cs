@@ -24,8 +24,9 @@ namespace ProjectBackend.Controllers
                 NoticeBoards = _db.NoticeBoards.ToList(),
                 NoticeTwos= _db.NoticeTwos.ToList(),
                 WhyChooses= _db.WhyChooses.FirstOrDefault(),
-                UpcomingEvents= _db.UpcomingEvents.ToList()
-       
+                Upcomming = _db.Upcomming.ToList(),
+                Testimonial= _db.Testimonial.FirstOrDefault()
+
             };
           
             return View(homeVM);

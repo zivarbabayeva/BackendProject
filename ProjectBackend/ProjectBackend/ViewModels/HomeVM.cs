@@ -13,6 +13,7 @@ namespace ProjectBackend.ViewModel
         public List<NoticeBoard> NoticeBoards { get; set; }
         public List<NoticeTwo> NoticeTwos { get; set; }
         public WhyChoose WhyChooses { get; set; }
-        public List<UpcomingEvents> UpcomingEvents { get; set; }
+        public List<Upcomming> Upcomming { get; set; }
+        public Testimonial Testimonial { get; set; }
     }
 }

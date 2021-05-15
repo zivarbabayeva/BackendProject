@@ -10,8 +10,8 @@ using ProjectBackend.DAL;
 namespace ProjectBackend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210513133553_AddNoticeBoardTable")]
-    partial class AddNoticeBoardTable
+    [Migration("20210515135418_CreateManyTables")]
+    partial class CreateManyTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -114,31 +114,18 @@ namespace ProjectBackend.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.HasKey("Id");
 
                     b.ToTable("Captions");
-                });
-
-            modelBuilder.Entity("ProjectBackend.Models.CourseCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CourseCategories");
                 });
 
             modelBuilder.Entity("ProjectBackend.Models.Courses", b =>
@@ -167,9 +154,6 @@ namespace ProjectBackend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(20)")
                         .HasMaxLength(20);
-
-                    b.Property<int?>("CourseCategoryId")
-                        .HasColumnType("int");
 
                     b.Property<int>("CourseFee")
                         .HasColumnType("int");
@@ -214,9 +198,34 @@ namespace ProjectBackend.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CourseCategoryId");
-
                     b.ToTable("Courses");
+                });
+
+            modelBuilder.Entity("ProjectBackend.Models.CoursesOffer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("SubTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CoursesOffers");
                 });
 
             modelBuilder.Entity("ProjectBackend.Models.Event", b =>
@@ -287,6 +296,49 @@ namespace ProjectBackend.Migrations
                     b.ToTable("Homes");
                 });
 
+            modelBuilder.Entity("ProjectBackend.Models.NoticeBoard", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NoticeBoards");
+                });
+
+            modelBuilder.Entity("ProjectBackend.Models.NoticeTwo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NoticeTwos");
+                });
+
             modelBuilder.Entity("ProjectBackend.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
@@ -294,10 +346,20 @@ namespace ProjectBackend.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
                     b.Property<string>("ImageUrl")
                         .IsRequired()
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.HasKey("Id");
 
@@ -401,18 +463,62 @@ namespace ProjectBackend.Migrations
                     b.ToTable("TeacherSpecialities");
                 });
 
+            modelBuilder.Entity("ProjectBackend.Models.Upcomming", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("During")
+                        .HasColumnType("datetime2")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("SubTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("Venue")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Upcomming");
+                });
+
+            modelBuilder.Entity("ProjectBackend.Models.WhyChoose", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("WhyChooses");
+                });
+
             modelBuilder.Entity("ProjectBackend.Models.Blog", b =>
                 {
                     b.HasOne("ProjectBackend.Models.BlogCategory", null)
                         .WithMany("Blogs")
                         .HasForeignKey("BlogCategoryId");
-                });
-
-            modelBuilder.Entity("ProjectBackend.Models.Courses", b =>
-                {
-                    b.HasOne("ProjectBackend.Models.CourseCategory", null)
-                        .WithMany("Courses")
-                        .HasForeignKey("CourseCategoryId");
                 });
 
             modelBuilder.Entity("ProjectBackend.Models.Teacher", b =>
