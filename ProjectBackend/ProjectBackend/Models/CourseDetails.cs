@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectBackend.Models
 {
-    public class Courses
+    public class CourseDetails
     {
         public int Id { get; set; }
         [Required]

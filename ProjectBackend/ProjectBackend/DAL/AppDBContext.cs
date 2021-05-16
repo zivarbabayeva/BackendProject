@@ -19,10 +19,11 @@ namespace ProjectBackend.DAL
         public DbSet<Upcomming> Upcomming { get; set; }
         public DbSet<Testimonial> Testimonial { get; set; }
         public DbSet<About> Abouts { get; set; }
+        public DbSet<VideoTour> VideoTour { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<CoursesOffer> CoursesOffers { get; set; }
-        public DbSet<Courses> Courses { get; set; }
+        public DbSet<CourseDetails> Courses { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Home> Homes { get; set; }
         public DbSet<Teacher> Teachers { get; set; }

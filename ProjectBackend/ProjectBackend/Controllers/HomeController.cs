@@ -19,6 +19,7 @@ namespace ProjectBackend.Controllers
         public async Task<IActionResult> Index()
         {
             HomeVM homeVM = new HomeVM
+            
             {
                 Sliders = _db.Sliders.ToList(),
                 NoticeBoards = _db.NoticeBoards.ToList(),
@@ -28,6 +29,7 @@ namespace ProjectBackend.Controllers
                 Testimonial= _db.Testimonial.FirstOrDefault()
 
             };
+          
           
             return View(homeVM);
         }
