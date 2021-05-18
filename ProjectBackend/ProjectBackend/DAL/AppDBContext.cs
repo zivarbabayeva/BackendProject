@@ -23,7 +23,8 @@ namespace ProjectBackend.DAL
         public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<CoursesOffer> CoursesOffers { get; set; }
-        public DbSet<CourseDetails> Courses { get; set; }
+        public DbSet<CourseDetails> CourseDetails { get; set; }
+        public DbSet<Categories> Categories { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Home> Homes { get; set; }
         public DbSet<Teacher> Teachers { get; set; }

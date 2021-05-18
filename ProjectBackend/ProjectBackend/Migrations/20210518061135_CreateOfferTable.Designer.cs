@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectBackend.DAL;
 
 namespace ProjectBackend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210518061135_CreateOfferTable")]
+    partial class CreateOfferTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -117,23 +119,6 @@ namespace ProjectBackend.Migrations
                     b.ToTable("Captions");
                 });
 
-            modelBuilder.Entity("ProjectBackend.Models.Categories", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(150)")
-                        .HasMaxLength(150);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
-
             modelBuilder.Entity("ProjectBackend.Models.CourseDetails", b =>
                 {
                     b.Property<int>("Id")
@@ -215,9 +200,6 @@ namespace ProjectBackend.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CategoriesId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(500)")
@@ -234,8 +216,6 @@ namespace ProjectBackend.Migrations
                         .HasMaxLength(250);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CategoriesId");
 
                     b.ToTable("CoursesOffers");
                 });
@@ -385,20 +365,60 @@ namespace ProjectBackend.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<string>("AboutTeacher")
                         .IsRequired()
-                        .HasColumnType("nvarchar(250)")
-                        .HasMaxLength(250);
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
+
+                    b.Property<string>("CallNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
+
+                    b.Property<string>("Degree")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
+
+                    b.Property<string>("Experience")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
+
+                    b.Property<string>("Faculty")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
+
+                    b.Property<string>("Hobbies")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(350)")
+                        .HasMaxLength(350);
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
+
+                    b.Property<string>("Mail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(250)")
-                        .HasMaxLength(250);
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
 
-                    b.Property<string>("Qualification")
+                    b.Property<string>("QualificationId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(250)")
-                        .HasMaxLength(250);
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
+
+                    b.Property<string>("Skype")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
 
                     b.Property<string>("SosialIcons")
                         .IsRequired()
@@ -555,13 +575,6 @@ namespace ProjectBackend.Migrations
                         .HasForeignKey("ProjectBackend.Models.CourseDetails", "CoursesOfferId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("ProjectBackend.Models.CoursesOffer", b =>
-                {
-                    b.HasOne("ProjectBackend.Models.Categories", null)
-                        .WithMany("CourseOffers")
-                        .HasForeignKey("CategoriesId");
                 });
 
             modelBuilder.Entity("ProjectBackend.Models.Teacher", b =>

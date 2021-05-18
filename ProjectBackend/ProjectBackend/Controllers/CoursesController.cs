@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProjectBackend.DAL;
+using ProjectBackend.Models;
+using ProjectBackend.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +17,20 @@ namespace ProjectBackend.Controllers
         {
             _db = db;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            List<CoursesOffer> coursesOffers = await _db.CoursesOffers.ToListAsync();
+            return View(coursesOffers);
+        }
+        public IActionResult Details(int id)
+        {
+
+            CourseDetails detail = _db.CourseDetails.Include(det => det.CoursesOffer).FirstOrDefault(detail => detail.CoursesOfferId == id);
+
+            return View(detail);
+
+        }
+           
         }
     }
-}
+

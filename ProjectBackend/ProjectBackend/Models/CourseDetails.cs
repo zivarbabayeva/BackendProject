@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,12 +11,6 @@ namespace ProjectBackend.Models
     {
         public int Id { get; set; }
         [Required]
-        [MaxLength(100)]
-        public string Title { get; set; }
-        [Required]
-        [MaxLength(500)]
-        public string Description { get; set; }
-        [Required]
         [MaxLength(500)]
         public string AboutCourse { get; set; }
         [Required]
@@ -24,6 +19,9 @@ namespace ProjectBackend.Models
         [Required]
         [MaxLength(500)]
         public string Certification { get; set; }
+        [Required]
+        [MaxLength(500)]
+        public string TabName { get; set; }
         [Required]
         [MaxLength(30)]
         public string Starts { get; set; }
@@ -44,5 +42,9 @@ namespace ProjectBackend.Models
         [MaxLength(20)]
         public string Assesments { get; set; }
         public int CourseFee { get; set; }
+        [ForeignKey("CoursesOffer")]
+        public int CoursesOfferId { get; set; }
+        public CoursesOffer CoursesOffer { get; set; }
+
     }
 }

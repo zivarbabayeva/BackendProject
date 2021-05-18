@@ -292,3 +292,4 @@ C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\n
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\ProjectBackend.genruntimeconfig.cache
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\About\Index.cshtml.g.cs
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Index.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Details.cshtml.g.cs

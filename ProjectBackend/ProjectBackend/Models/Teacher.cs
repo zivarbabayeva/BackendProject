@@ -12,43 +12,26 @@ namespace ProjectBackend.Models
     {
         public int Id { get; set; }
         [Required]
-        [MaxLength(150)]
+        [MaxLength(250)]
+        public string ImageUrl { get; set; }
+        [Required]
+        [MaxLength(250)]
         public string Name { get; set; }
         [Required]
-        [MaxLength(150)]
-        public string Image { get; set; }
-        [NotMapped]
-        public IFormFile ImageFile { get; set; }
-        [Required]
-        [MaxLength(150)]
-        public string QualificationId { get; set; }
-        [Required]
-        [MaxLength(150)]
-        public string AboutTeacher { get; set; }
-        [Required]
-        [MaxLength(150)]
-        public string Degree { get; set; }
-        [Required]
-        [MaxLength(150)]
-        public string Experience { get; set; }
-        [Required]
-        [MaxLength(350)]
-        public string Hobbies { get; set; }
-        [Required]
-        [MaxLength(150)]
-        public string Faculty { get; set; }
-        [Required]
-        [MaxLength(150)]
-        public string Mail { get; set; }
-        [Required]
-        [MaxLength(150)]
-        public string CallNumber { get; set; }
-        [Required]
-        [MaxLength(150)]
-        public string Skype { get; set; }
+        [MaxLength(250)]
+        public string Qualification { get; set; }
         [Required]
         [MaxLength(150)]
         public string SosialIcons { get; set; }
+        //[NotMapped]
+        //public IFormFile ImageFile { get; set; }
+        //[Required]
+        //[MaxLength(150)]
+        //public string QualificationId { get; set; }
+        
+        
+        
+
 
     }
 }

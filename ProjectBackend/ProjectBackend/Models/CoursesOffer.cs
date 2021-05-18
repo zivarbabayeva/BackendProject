@@ -18,6 +18,7 @@ namespace ProjectBackend.Models
         [Required]
         [MaxLength(500)]
         public string Description { get; set; }
-     
+        public CourseDetails CourseDetails { get; set; }
+
     }
 }

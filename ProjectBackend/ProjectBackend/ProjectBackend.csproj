@@ -7,6 +7,16 @@
   <ItemGroup>
     <Compile Remove="Migrations\20210515135057_CreateManyTables.cs" />
     <Compile Remove="Migrations\20210515135057_CreateManyTables.Designer.cs" />
+    <Compile Remove="Migrations\20210517073307_CreateCourseDetailsTable.cs" />
+    <Compile Remove="Migrations\20210517073307_CreateCourseDetailsTable.Designer.cs" />
+    <Compile Remove="Migrations\20210517093431_CreateCourseTable.cs" />
+    <Compile Remove="Migrations\20210517093431_CreateCourseTable.Designer.cs" />
+    <Compile Remove="Migrations\20210518060156_CreateNewOfferTable.cs" />
+    <Compile Remove="Migrations\20210518060156_CreateNewOfferTable.Designer.cs" />
+    <Compile Remove="Migrations\20210518060353_CreateOfferTable.cs" />
+    <Compile Remove="Migrations\20210518060353_CreateOfferTable.Designer.cs" />
+    <Compile Remove="Migrations\20210518061027_CreateOfferTable.cs" />
+    <Compile Remove="Migrations\20210518061027_CreateOfferTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
