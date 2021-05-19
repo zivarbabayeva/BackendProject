@@ -12,20 +12,25 @@ namespace ProjectBackend.Models
     {
         public int Id { get; set; }
         [Required]
+        [MaxLength(350)]
+        public string ImageUrl { get; set; }
+        [Required]
         [MaxLength(150)]
+        public DateTime Date { get; set; }
+        [Required]
+        [MaxLength(250)]
         public string Title { get; set; }
         [Required]
         [MaxLength(150)]
-        public string Image { get; set; }
-        [NotMapped]
-        public IFormFile ImageFile { get; set; }
+        public string StartTime { get; set; }
         [Required]
-        [MaxLength(100)]
+        [MaxLength(150)]
+        public string EndTime { get; set; }
+        [Required]
+        [MaxLength(150)]
         public string Venue { get; set; }
-        public DateTime EventTime { get; set; }
-        [Required]
-        [MaxLength(300)]
-        public string Content { get; set; }
         public int SpeakerId { get; set; }
+        public Eventdetails Eventdetails { get; set; }
+        public List<Speakers> Speakers { get; set; }
     }
 }

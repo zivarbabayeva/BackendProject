@@ -17,6 +17,14 @@
     <Compile Remove="Migrations\20210518060353_CreateOfferTable.Designer.cs" />
     <Compile Remove="Migrations\20210518061027_CreateOfferTable.cs" />
     <Compile Remove="Migrations\20210518061027_CreateOfferTable.Designer.cs" />
+    <Compile Remove="Migrations\20210519071947_CreateSideTable.cs" />
+    <Compile Remove="Migrations\20210519071947_CreateSideTable.Designer.cs" />
+    <Compile Remove="Migrations\20210519072311_CreateSidemenuTable.cs" />
+    <Compile Remove="Migrations\20210519072311_CreateSidemenuTable.Designer.cs" />
+    <Compile Remove="Migrations\20210519074922_CreateBarTable.cs" />
+    <Compile Remove="Migrations\20210519074922_CreateBarTable.Designer.cs" />
+    <Compile Remove="Migrations\20210519083057_CreateTeacherTable.cs" />
+    <Compile Remove="Migrations\20210519083057_CreateTeacherTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +35,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Shared\Components\Sidemenu\" />
   </ItemGroup>
 
 </Project>

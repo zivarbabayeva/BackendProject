@@ -22,15 +22,17 @@ namespace ProjectBackend.Models
         public string Qualification { get; set; }
         [Required]
         [MaxLength(150)]
-        public string SosialIcons { get; set; }
+        public TeacherDetails TeacherDetails { get; set; }
+        public TeacherSpeciality TeacherSpeciality { get; set; }
+    
         //[NotMapped]
         //public IFormFile ImageFile { get; set; }
         //[Required]
         //[MaxLength(150)]
         //public string QualificationId { get; set; }
-        
-        
-        
+
+
+
 
 
     }
