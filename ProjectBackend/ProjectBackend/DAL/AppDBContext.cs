@@ -22,8 +22,8 @@ namespace ProjectBackend.DAL
         public DbSet<Testimonial> Testimonial { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<VideoTour> VideoTour { get; set; }
-        public DbSet<BlogCategory> BlogCategories { get; set; }
-        public DbSet<Blog> Blogs { get; set; }
+         public DbSet<Blogdetails> Blogdetails { get; set; }
+        public DbSet<Blog> Blog { get; set; }
         public DbSet<CoursesOffer> CoursesOffers { get; set; }
         public DbSet<CourseDetails> CourseDetails { get; set; }
         public DbSet<Categories> Categories { get; set; }
@@ -32,6 +32,7 @@ namespace ProjectBackend.DAL
         public DbSet<Event> Events { get; set; }
         public DbSet<Eventdetails> Eventdetails { get; set; }
         public DbSet<Speakers> Speakers { get; set; }
+        public EventSpeakers EventSpeakers {get; set; }
         public DbSet<Home> Homes { get; set; }
         public DbSet<Teacher> Teacher { get; set; }
         public DbSet<TeacherDetails> TeacherDetails { get; set; }

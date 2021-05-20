@@ -26,7 +26,7 @@ namespace ProjectBackend.Controllers
         public IActionResult Details(int id)
         {
 
-            Eventdetails detail = _db.Eventdetails.Include(det => det.Event).FirstOrDefault(detail => detail.EventId == id);
+            Eventdetails detail = _db.Eventdetails.Include(det => det.Event).Include(x=>x.EventSpeakers).ThenInclude(x=>x.Speakers).FirstOrDefault(detail => detail.EventId == id);
 
             return View(detail);
 

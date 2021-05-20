@@ -1,4 +1,5 @@
 ﻿@model Eventdetails
+
 @{
     ViewData["Title"] = "Details";
 }
@@ -27,9 +28,9 @@
             <div class="col-md-8">
                 <div class="event-details">
                     <div class="event-details-img">
-                        <img src="img/event/@Model.Event.ImageUrl" alt="event-details">
+                        <img src="~/img/event/@Model.Event.ImageUrl" alt="event-details">
                         <div class="event-date">
-                            <h3>@Model.Event.Date</h3>
+                            <h3>@Model.Event.Date.ToString("dd MMM")</h3>
                         </div>
                     </div>
                     <div class="event-details-content">
@@ -43,25 +44,20 @@
                         <p>@Model.Desc</p>
                         <div class="speakers-area fix">
                             <h4>speakers</h4>
-                            <div class="single-speaker">
-                               
-                                <div class="speaker-img">
-                                    <img src="img/event/@Model.SpeakerImageUrl" alt="speaker">
+                            @foreach (EventSpeakers es in Model.EventSpeakers)
+                            {
+                                <div class="single-speaker">
+                                    <div class="speaker-img">
+                                        <img src="~/img/event/@es.Speakers.SpeakerImageUrl" alt="speaker">
+                                    </div>
+                                    <div class="speaker-name">
+                                        <h5>@es.Speakers.SpeakerName</h5>
+                                        <p>@es.Speakers.SpeakerQualification</p>
+                                    </div>
                                 </div>
-                                <div class="speaker-name">
-                                    <h5>@Model.SpeakerName</h5>
-                                    <p>@Model.SpeakerQualification </p>
-                                </div>
-                            </div>
-                            <div class="single-speaker">
-                                <div class="speaker-img">
-                                    <img src="img/event/speaker2.jpg" alt="speaker">
-                                </div>
-                                <div class="speaker-name">
-                                    <h5>Lucy Rose</h5>
-                                    <p>Developer, STD </p>
-                                </div>
-                            </div>
+
+                            }
+
                         </div>
                     </div>
                     <div class="reply-area">
@@ -116,7 +112,7 @@
                     </div>
                     <div class="single-blog-widget mb-50">
                         <div class="single-blog-banner">
-                            <a href="blog-details.html" id="blog"><img src="img/blog/blog-img.jpg" alt="blog"></a>
+                            <a href="blog-details.html" id="blog"><img src="~/img/blog/blog-img.jpg" alt="blog"></a>
                             <h2>best<br> eductaion<br> theme</h2>
                         </div>
                     </div>
@@ -125,7 +121,7 @@
                         <div class="single-post mb-30">
                             <div class="single-post-img">
                                 <a href="blog-details.html">
-                                    <img src="img/post/post1.jpg" alt="post">
+                                    <img src="~/img/post/post1.jpg" alt="post">
                                     <div class="blog-hover">
                                         <i class="fa fa-link"></i>
                                     </div>
@@ -139,7 +135,7 @@
                         <div class="single-post mb-30">
                             <div class="single-post-img">
                                 <a href="blog-details.html">
-                                    <img src="img/post/post2.jpg" alt="post">
+                                    <img src="~/img/post/post2.jpg" alt="post">
                                     <div class="blog-hover">
                                         <i class="fa fa-link"></i>
                                     </div>
@@ -153,7 +149,7 @@
                         <div class="single-post">
                             <div class="single-post-img">
                                 <a href="blog-details.html">
-                                    <img src="img/post/post3.jpg" alt="post">
+                                    <img src="~/img/post/post3.jpg" alt="post">
                                     <div class="blog-hover">
                                         <i class="fa fa-link"></i>
                                     </div>
@@ -183,33 +179,5 @@
 </div>
 <!-- Event Details End -->
 <!-- Subscribe Start -->
-<div class="subscribe-area pt-60 pb-70">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="subscribe-content section-title text-center">
-                    <h2>subscribe our newsletter</h2>
-                    <p>I must explain to you how all this mistaken idea </p>
-                </div>
-                <div class="newsletter-form mc_embed_signup">
-                    <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll" class="mc-form">
-                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your e-mail address" required>
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                            <button id="mc-embedded-subscribe" class="default-btn" type="submit" name="subscribe"><span>subscribe</span></button>
-                        </div>
-                    </form>
-                    <!-- mailchimp-alerts Start -->
-                    <div class="mailchimp-alerts">
-                        <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                        <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                        <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                    </div>
-                    <!-- mailchimp-alerts end -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@await Component.InvokeAsync("Subscribe")
 <!-- Subscribe End -->

@@ -37,14 +37,11 @@ namespace ProjectBackend.Models
         public string SubDescription { get; set; }
         [Required]
         [MaxLength(500)]
-        public int SpeakerId { get; set; }
-        public string SpeakerImageUrl { get; set; }
-        public string SpeakerName { get; set; }
-        public string SpeakerQualification { get; set; }
         public string Desc { get; set; }
         public Event Event { get; set; }
         [ForeignKey("Event")]
         public int EventId { get; set; }
-      
+        public List<EventSpeakers> EventSpeakers { get; set; }
+
     }
 }

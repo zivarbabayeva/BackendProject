@@ -43,7 +43,7 @@
                         @foreach (NoticeBoard notice in Model.NoticeBoards)    
                         {
                     <div class="single-notice-left mb-25 pb-25">
-                        <h4>@notice.CreatedDate</h4>
+                        <h4>@notice.CreatedDate.ToString("dd MMM")</h4>
                         <p>@notice.Description</p>
                     </div>
                         }

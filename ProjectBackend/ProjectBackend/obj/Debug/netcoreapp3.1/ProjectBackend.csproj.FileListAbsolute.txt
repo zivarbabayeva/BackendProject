@@ -300,3 +300,9 @@ C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\n
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Index.cshtml.g.cs
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Event\Index.cshtml.g.cs
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Event\Details.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Details.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs

@@ -29,24 +29,25 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-event mb-60">
                         <div class="event-img">
-                            <a href="event-details.html">
-                                <img src="img/event/@ev.ImageUrl" alt="event">
+                            <a asp-controller="Event" asp-action="Details" asp-route-id="@ev.Id">
+                                <img src="~/img/event/@ev.ImageUrl" alt="event">
                                 <div class="course-hover">
                                     <i class="fa fa-link"></i>
                                 </div>
                             </a>
+
                             <div class="event-date">
-                                <h3>@ev.Date></h3>
+                                <h3>@ev.Date.ToString("dd MMM")</h3>
                             </div>
                         </div>
                         <div class="event-content text-left">
-                            <h4><a href="event-details.html">@ev.Title</a></h4>
+                            <h4><a hasp-controller="Event" asp-action="Details" asp-route-id="@ev.Id">@ev.Title</a></h4>
                             <ul>
                                 <li><span>time:</span>@ev.StartTime - @ev.EndTime</li>
                                 <li><span>venue</span>@ev.Venue </li>
                             </ul>
                             <div class="event-content-right">
-                                <a class="default-btn" href="event-details.html">join now</a>
+                                <a class="default-btn" asp-controller="Event" asp-action="Details" asp-route-id="@ev.Id">join now</a>
                             </div>
                         </div>
                     </div>

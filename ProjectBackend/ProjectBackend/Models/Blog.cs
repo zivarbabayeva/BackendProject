@@ -13,16 +13,16 @@ namespace ProjectBackend.Models
         public int Id { get; set; }
         [Required]
         [MaxLength(150)]
+        public string ImageUrl { get; set; }
+        [Required]
+        [MaxLength(150)]
+        public string Bywhom { get; set; }
+        public DateTime Date { get; set; }
+        [Required]
+        [MaxLength(150)]
         public string Title { get; set; }
-        [Required]
-        [MaxLength(150)]
-        public string Image { get; set; }
-        [NotMapped]
-        public IFormFile ImageFile { get; set; }
-        [Required]
-        [MaxLength(150)]
-        public string ImageContent { get; set; }
-        public int CategoryId { get; set; }
-        public DateTime CreatedDDate { get; set; }
+
+        public Blogdetails Blogdetails { get; set; }
+
     }
 }

@@ -29,8 +29,7 @@ namespace ProjectBackend.Models
         [Required]
         [MaxLength(150)]
         public string Venue { get; set; }
-        public int SpeakerId { get; set; }
         public Eventdetails Eventdetails { get; set; }
-        public List<Speakers> Speakers { get; set; }
+       
     }
 }
