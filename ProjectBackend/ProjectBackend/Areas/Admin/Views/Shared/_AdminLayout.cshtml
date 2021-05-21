@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="~/admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
+    @RenderSection("Css",false)
     <link rel="stylesheet" href="~/admin/css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="~/admin/images/favicon.png" />
@@ -182,8 +183,8 @@
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Course" asp-action="Index">Courses List</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Course" asp-action="Create">Create Course</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Courses" asp-action="Index">Courses List</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Courses" asp-action="Create">Create Course</a></li>
                             </ul>
                         </div>
                     </li>
@@ -274,6 +275,7 @@
   <script src="~/admin/js/data-table.js"></script>
   <script src="~/admin/js/jquery.dataTables.js"></script>
   <script src="~/admin/js/dataTables.bootstrap4.js"></script>
+    @RenderSection("Script",false)
   <!-- End custom js for this page-->
 </body>
 
