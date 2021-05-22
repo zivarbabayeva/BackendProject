@@ -13,9 +13,8 @@ namespace ProjectBackend.Models
         [Required]
         [MaxLength(250)]
         public string SubTitle { get; set; }
-        [Required]
-        [MaxLength(250)]
-        public string During { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
         [Required]
         [MaxLength(250)]
         public string Venue { get; set; }

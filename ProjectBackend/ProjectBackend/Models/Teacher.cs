@@ -15,18 +15,20 @@ namespace ProjectBackend.Models
         [MaxLength(250)]
         public string ImageUrl { get; set; }
         [Required]
-        [MaxLength(250)]
+        [MaxLength(150)]
         public string Name { get; set; }
         [Required]
-        [MaxLength(250)]
+        [MaxLength(150)]
         public string Qualification { get; set; }
+        public bool IsDeleted { get; set; }
+        [NotMapped]
+        public IFormFile Photo { get; set; }
         [Required]
         [MaxLength(150)]
         public TeacherDetails TeacherDetails { get; set; }
         public TeacherSpeciality TeacherSpeciality { get; set; }
     
-        //[NotMapped]
-        //public IFormFile ImageFile { get; set; }
+      
         //[Required]
         //[MaxLength(150)]
         //public string QualificationId { get; set; }

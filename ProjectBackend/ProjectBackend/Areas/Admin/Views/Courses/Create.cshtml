@@ -27,7 +27,7 @@
 </div>
 @section Script
 {
-    <partial name="_ValidationPartial" />
+   
     <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
     <script>
         ClassicEditor
@@ -35,5 +35,6 @@
             .catch(error => {
                 console.error(error);
             });
+        <partial name="_ValidationPartial" />
     </script>
 }

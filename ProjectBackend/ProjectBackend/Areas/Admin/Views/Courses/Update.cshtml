@@ -1,4 +1,4 @@
-﻿odel CoursesOffer
+﻿@model CoursesOffer
 @{
     ViewData["Title"] = "Update";
 }
@@ -10,13 +10,13 @@
                 <h4 class="card-title">Update Course</h4>
                 <form class="forms-sample" method="post">
                     <div class="form-group">
-                        <labe@*l asp-for="SubTitle"></label>
+                        <label asp-for="SubTitle"></label>
                         <input asp-for="SubTitle" class="form-control" id="exampleInputName1" placeholder="Name">
                         <span class="text-danger" asp-validation-for="SubTitle"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Description" class="d-block"></label>
-                        <textarea asp-for="Description" id="editor"></textarea>*@
+                        <textarea asp-for="Description" id="editor"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <a class="btn btn-light" asp-action="Index">Cancel</a>
@@ -27,7 +27,6 @@
 </div>
 @section Script
 {
-    <partial name="_ValidationPartial" />
     <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
     <script>
         ClassicEditor
@@ -36,4 +35,5 @@
                 console.error(error);
             });
     </script>
+    <partial name="_ValidationPartial" />
 }

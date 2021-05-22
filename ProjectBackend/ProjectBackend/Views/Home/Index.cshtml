@@ -166,13 +166,13 @@
                         @foreach (var item in Model.Upcomming.Take(4))
                         {
                             <div class="event-date">
-                                <h3><a href="event-details.html"> @item.Date.ToString("dd") <span>@item.Date.ToString("MMMM")</span></a></h3>
+                                <h3><a href="event-details.html"> @item.Date.ToString("dd") <span> @item.Date.ToString("MMMM")</span></a></h3>
                             </div>
                             <div class="event-content text-left">
                                 <div class="event-content-left">
                                     <h4>@item.SubTitle</h4>
                                     <ul>
-                                        <li><i class="fa fa-clock-o"></i>@item.During.ToString() -@item.During.ToString()</li>
+                                        <li><i class="fa fa-clock-o"></i>@item.StartTime.ToString("hh:mm tt") - @item.EndTime.ToString("hh:mm tt")</li>
                                         <li><i class="fa fa-map-marker"></i>@item.Venue</li>
                                     </ul>
                                 </div>
@@ -189,13 +189,13 @@
                         @foreach (var item in Model.Upcomming.Skip(4).Take(4))
                         {
                             <div class="event-date ">
-                                <h3><a href="event-details.html"> @item.Date.ToString("dd")<span>@item.Date.ToString("MMMM")</span></a></h3>
+                                <h3><a href="event-details.html"> @item.Date.ToString("dd") <span> @item.Date.ToString("MMMM")</span></a></h3>
                             </div>
                             <div class="event-content text-left">
                                 <div class="event-content-left">
                                     <h4><a href="event-details.html">@item.SubTitle</a></h4>
                                     <ul>
-                                        <li><i class="fa fa-clock-o"></i>@item.During.ToString() -@item.During.ToString()</li>
+                                        <li><i class="fa fa-clock-o"></i>@item.StartTime.ToString("hh:mm tt") - @item.EndTime.ToString("hh:mm tt")</li>
                                         <li><i class="fa fa-map-marker"></i>@item.Venue</li>
                                     </ul>
                                 </div>
@@ -203,7 +203,6 @@
                                     <a class="default-btn" href="event-details.html">join now</a>
                                 </div>
                             </div>
-
                         }
                     </div>
                 </div>

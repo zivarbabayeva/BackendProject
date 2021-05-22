@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectBackend.Areas.Admin.Controllers
 {
+
     [Area("Admin")]
     public class CoursesController : Controller
     {
@@ -21,6 +22,7 @@ namespace ProjectBackend.Areas.Admin.Controllers
         {
             return View(await _context.CoursesOffers.ToListAsync());
         }
+        //Create //
         public IActionResult Create()
         {
             return View();
@@ -35,19 +37,21 @@ namespace ProjectBackend.Areas.Admin.Controllers
             {
                 ModelState.AddModelError("SubTitle", "Bu adda kurs movcuddur");
                 return View();
-            }     
+            }
             await _context.CoursesOffers.AddAsync(courses);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        public async Task<IActionResult> Detail (int? id)
+        //detail//
+        public async Task<IActionResult> Detail(int? id)
         {
             if (id == null) return NotFound();
-            CoursesOffer courses =await _context.CoursesOffers.FirstOrDefaultAsync(cr => cr.Id == id);
+            CoursesOffer courses = await _context.CoursesOffers.FirstOrDefaultAsync(cr => cr.Id == id);
             if (courses == null) return NotFound();
             return View(courses);
         }
-        public async Task<IActionResult>Delete(int? id)
+        //Delete//
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
             CoursesOffer courses = await _context.CoursesOffers.FirstOrDefaultAsync(cr => cr.Id == id);
@@ -57,6 +61,7 @@ namespace ProjectBackend.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ActionName("Delete")]
+        //DeletePost//
         public async Task<IActionResult> DeletePost(int? id)
         {
             if (id == null) return NotFound();
@@ -66,12 +71,36 @@ namespace ProjectBackend.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        //Update//
         public async Task<IActionResult> Update(int? id)
         {
             if (id == null) return NotFound();
             CoursesOffer courses = await _context.CoursesOffers.FirstOrDefaultAsync(cr => cr.Id == id);
             if (courses == null) return NotFound();
             return View(courses);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(int? id, CoursesOffer courses)
+        {
+            if (id == null) return NotFound();
+            CoursesOffer coursesView = await _context.CoursesOffers.FirstOrDefaultAsync(cr => cr.Id == id);
+            if (courses == null) return NotFound();
+            if (!ModelState.IsValid)
+            {
+                return View(coursesView);
+            }
+            CoursesOffer coursesDb = await _context.CoursesOffers
+                .FirstOrDefaultAsync(cr => cr.SubTitle.ToLower().Trim() == courses.SubTitle.ToLower().Trim());
+            if (coursesDb != null && coursesDb.Id != id)
+            {
+                ModelState.AddModelError("SubTitle", "This category is already exist");
+                return View(coursesView);
+            }
+            coursesView.SubTitle = courses.SubTitle;
+            coursesView.Description = courses.Description;
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }
