@@ -1,0 +1,16 @@
+﻿@model Teacher
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="Raw">
+    <div class="col-12">
+        <h1>@Model.Name</h1>
+        <div>
+            @Html.Raw(Model.Qualification)
+        </div>
+        <div>
+            <a asp-action="Index" class="btn btn-inverse-secondary">Go Back</a>
+        </div>
+    </div>
+</div>

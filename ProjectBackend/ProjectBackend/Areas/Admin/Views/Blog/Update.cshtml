@@ -1,0 +1,39 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Update Blog</h4>
+                <form class="forms-sample" method="post">
+                    <div class="form-group">
+                        <label asp-for="Title"></label>
+                        <input asp-for="Title" class="form-control" id="exampleInputName1" placeholder="Name">
+                        <span class="text-danger" asp-validation-for="Title"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Date" class="d-block"></label>
+                        <textarea asp-for="Date" id="editor"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a class="btn btn-light" asp-action="Index">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Script
+{
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <partial name="_ValidationPartial" />
+}

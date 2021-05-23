@@ -32,20 +32,24 @@
                             <a asp-controller="Teacher" asp-action="Details" asp-route-id="@teach.Id">
                                 <img src="~/img/teacher/@teach.ImageUrl" alt="teacher">
                             </a>
-                                <div class="single-teacher-content text-center">
-                                    <h2><a asp-controller="Teacher" asp-action="Details" asp-route-id="@teach.Id">@teach.Name</a></h2>
-                                    <h4>@teach.Qualification</h4>
-                                    <ul>
-                                        <li><a href="https://www.facebook.com/devitems/?ref=bookmarks"><i class="zmdi zmdi-facebook"></i></a></li>
-                                        <li><a href="https://www.pinterest.com/devitemsllc/"><i class="zmdi zmdi-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="zmdi zmdi-vimeo"></i></a></li>
-                                        <li><a href="https://twitter.com/devitemsllc"><i class="zmdi zmdi-twitter"></i></a></li>
-                                    </ul>
-                                </div>
+                            <div class="single-teacher-content text-center">
+                                <h2><a asp-controller="Teacher" asp-action="Details" asp-route-id="@teach.Id">@teach.Name</a></h2>
+                                <h4>@teach.Qualification</h4>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/devitems/?ref=bookmarks"><i class="zmdi zmdi-facebook"></i></a></li>
+                                    <li><a href="https://www.pinterest.com/devitemsllc/"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-vimeo"></i></a></li>
+                                    <li><a href="https://twitter.com/devitemsllc"><i class="zmdi zmdi-twitter"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    </div>
+                </div>
               }
+        </div>
+     </div>
+ </div>
+
 
 <!-- Subscribe Start -->
 @await Component.InvokeAsync("Subscribe");

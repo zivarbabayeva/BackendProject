@@ -1,9 +1,8 @@
 ﻿
-
 @model List<Teacher>
 
 @{
-    ViewData["Title"] = "CourseIndex";
+    ViewData["Title"] = "TeacherIndex";
 }
 <div class="row">
     <div class="col-lg-12 grid-margin stretch-card">
@@ -19,7 +18,7 @@
                                     Teachers Image
                                 </th>
                                 <th>
-                                   Teachers Name
+                                    Teachers Name
                                 </th>
                                 <th>
                                     Setting
@@ -32,7 +31,7 @@
                                 <tr>
 
                                     <td>
-                                        <img style="width:130PX !important; height:130px !important" src="~/img/course/@teach.ImageUrl" />
+                                        <img style="width:130PX !important; height:130px !important" src="~/img/teacher/@teach.ImageUrl" />
                                     </td>
                                     <td>
                                         @teach.Name

@@ -21,6 +21,11 @@ namespace ProjectBackend.Models
         [Required]
         [MaxLength(150)]
         public string Title { get; set; }
+        [NotMapped]
+        public IFormFile Photo { get; set; }
+        public bool IsDeleted { get; set; }
+        [Required]
+        public bool IsMain { get; set; }
 
         public Blogdetails Blogdetails { get; set; }
 

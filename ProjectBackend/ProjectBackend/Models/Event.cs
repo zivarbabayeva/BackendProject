@@ -29,6 +29,11 @@ namespace ProjectBackend.Models
         [Required]
         [MaxLength(150)]
         public string Venue { get; set; }
+        [NotMapped]
+        public IFormFile Photo { get; set; }
+        public bool IsDeleted { get; set; }
+        [Required]
+        public bool IsMain { get; set; }
         public Eventdetails Eventdetails { get; set; }
        
     }

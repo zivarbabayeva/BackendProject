@@ -135,6 +135,12 @@ namespace ProjectBackend.Migrations
                         .HasColumnType("nvarchar(150)")
                         .HasMaxLength(150);
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(150)")
@@ -362,6 +368,12 @@ namespace ProjectBackend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(350)")
                         .HasMaxLength(350);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
 
                     b.Property<string>("StartTime")
                         .IsRequired()
@@ -624,8 +636,8 @@ namespace ProjectBackend.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(150)")
-                        .HasMaxLength(150);
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
 
                     b.Property<string>("Qualification")
                         .IsRequired()

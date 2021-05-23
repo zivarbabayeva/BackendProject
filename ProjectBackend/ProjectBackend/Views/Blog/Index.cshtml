@@ -37,10 +37,11 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-top">
-                                <p>@blogs.Bywhom  /  @blogs.Date.ToString("dd MMM")  /  <i class="fa fa-comments-o"></i> 4</p>
+                                <p>@blogs.Bywhom  /  @blogs.Date.ToString("dd MM yy")  /  <i class="fa fa-comments-o"></i> 4</p>
                             </div>
                             <div class="blog-bottom">
-                                <h2><a href="blog-details.html">@blogs.Title </a></h2>
+                                <h2><a asp-controller="Blog" asp-action="Details" asp-route-id="@blogs.Id">@blogs.Title</a></h2>
+                               
                                 <a href="blog-details.html">read more</a>
                             </div>
                         </div>

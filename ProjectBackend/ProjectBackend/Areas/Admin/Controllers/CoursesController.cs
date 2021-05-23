@@ -102,5 +102,25 @@ namespace ProjectBackend.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        //search//
+        public async Task<IActionResult> Index(string searchString)
+        {
+            var courses = from cr in _context.CoursesOffers
+                          select cr;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                courses = courses.Where(cr => cr.SubTitle.Contains(searchString));
+            }
+            return View(await courses.ToListAsync());
+        }
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: filter on " + searchString;
+        }
+
+
     }
-}
+    }

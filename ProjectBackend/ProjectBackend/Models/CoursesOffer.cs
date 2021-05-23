@@ -21,7 +21,7 @@ namespace ProjectBackend.Models
         public string Description { get; set; }
         [NotMapped]
         public IFormFile Photo { get; set; }
-        public bool IsDeleted { get; set; }
+
         public CourseDetails CourseDetails { get; set; }
 
     }
