@@ -31,5 +31,11 @@ namespace ProjectBackend.Controllers
             return View(detail);
 
         }
+        public async Task<IActionResult> Search(string search)
+        {
+
+            List<Event> events = await _db.Events.Where(x => x.Title.Contains(search)).ToListAsync();
+            return View(events);
+        }
     }
 }

@@ -293,7 +293,6 @@ C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\n
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\About\Index.cshtml.g.cs
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Index.cshtml.g.cs
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Details.cshtml.g.cs
-C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Subscribe\Default.cshtml.g.cs
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Sidebar\Default.cshtml.g.cs
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Details.cshtml.g.cs
@@ -332,3 +331,8 @@ C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\n
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\bin\Debug\netcoreapp3.1\MailKit.dll
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\bin\Debug\netcoreapp3.1\MimeKit.dll
 C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Post\Default.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Search.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Search.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Event\Search.cshtml.g.cs
+C:\Users\LEGION\Desktop\BackendProject\ProjectBackend\ProjectBackend\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Search.cshtml.g.cs

@@ -13,5 +13,7 @@ namespace ProjectBackend.Models
         [MaxLength(150)]
         public string Name { get; set; }
         public List<CoursesOffer> CourseOffers { get; set; }
+        public List<Event> Event { get; set; }
+        public List<Teacher> Teachers { get; set; }
     }
 }

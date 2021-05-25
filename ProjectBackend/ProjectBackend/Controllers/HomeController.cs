@@ -25,7 +25,7 @@ namespace ProjectBackend.Controllers
                 NoticeBoards = _db.NoticeBoards.ToList(),
                 NoticeTwos= _db.NoticeTwos.ToList(),
                 WhyChooses= _db.WhyChooses.FirstOrDefault(),
-                Upcomming = _db.Upcomming.ToList(),
+                Upcomming = _db.Upcomming.Take(4).ToList(),
                 Testimonial= _db.Testimonial.FirstOrDefault()
 
             };

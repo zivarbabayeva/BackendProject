@@ -11,12 +11,78 @@
                 <form class="forms-sample" method="post">
                     <div class="form-group">
                         <label asp-for="SubTitle"></label>
-                        <input asp-for="SubTitle" class="form-control" id="exampleInputName1" placeholder="Name">
+                        <input asp-for="SubTitle" class="form-control" id="exampleInputName1" placeholder="">
                         <span class="text-danger" asp-validation-for="SubTitle"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Description" class="d-block"></label>
-                        <textarea asp-for="Description"  id="editor"></textarea>
+                        <label asp-for="CourseDetails.AboutCourse"></label>
+                        <input asp-for="CourseDetails.AboutCourse" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.AboutCourse"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.HowToApply"></label>
+                        <input asp-for="CourseDetails.HowToApply" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.HowToApply"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.Certification"></label>
+                        <input asp-for="CourseDetails.Certification" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.Certification"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.TabName "></label>
+                        <input asp-for="CourseDetails.TabName " class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.TabName "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.Starts "></label>
+                        <input asp-for="CourseDetails.Starts " class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.Starts "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.Duration "></label>
+                        <input asp-for="CourseDetails.Duration " class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.Duration "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.ClassDuration "></label>
+                        <input asp-for="CourseDetails.ClassDuration " class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.ClassDuration "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.SkilLevel "></label>
+                        <input asp-for="CourseDetails.SkilLevel " class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.SkilLevel "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.Language "></label>
+                        <input asp-for="CourseDetails.Language " class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.Language "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.StudentsCount "></label>
+                        <input asp-for="CourseDetails.StudentsCount " class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.StudentsCount "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.Assesments "></label>
+                        <input asp-for="CourseDetails.Assesments " class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.Assesments "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.CourseFee "></label>
+                        <input asp-for="CourseDetails.CourseFee" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.CourseFee "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.CoursesOfferId "></label>
+                        <input asp-for="CourseDetails.CoursesOfferId" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.CoursesOfferId"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseDetails.CoursesOffer "></label>
+                        <input asp-for="CourseDetails.CoursesOffer" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="CourseDetails.CoursesOffer"></span>
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <a class="btn btn-light" asp-action="Index">Cancel</a>

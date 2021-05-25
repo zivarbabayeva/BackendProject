@@ -25,7 +25,8 @@ namespace ProjectBackend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<AppDbContext>(options => {
+            services.AddDbContext<AppDbContext>(options =>
+            {
                 options.UseSqlServer(_config["ConnectionStrings:Default"]);
             });
         }
@@ -39,11 +40,12 @@ namespace ProjectBackend
             }
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
-          
+
                 endpoints.MapControllerRoute(
           name: "areas",
           pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"

@@ -23,6 +23,8 @@ namespace ProjectBackend.Models
         public IFormFile Photo { get; set; }
 
         public CourseDetails CourseDetails { get; set; }
+        public Categories Categories { get; set; }
+
 
     }
 }

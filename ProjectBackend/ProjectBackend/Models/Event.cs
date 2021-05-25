@@ -35,6 +35,7 @@ namespace ProjectBackend.Models
         [Required]
         public bool IsMain { get; set; }
         public Eventdetails Eventdetails { get; set; }
-       
+        public Categories Categories { get; set; }
+
     }
 }

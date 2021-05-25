@@ -39,9 +39,8 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-blog mb-60">
                         <div class="blog-img">
-
                             <a asp-controller="Blog" asp-action="Details" asp-route-id="@blogs.Id">
-                                <img src="~/img/blog/@blogs.ImageUrl" alt="blog">
+                                <a href="#"><img src="~/img/blog/@blogs.ImageUrl" alt="blog"></a>
                                 <div class="blog-hover">
                                     <i class="fa fa-link"></i>
                                 </div>
@@ -53,7 +52,8 @@
                             </div>
                             <div class="blog-bottom">
                                 <h2><a asp-controller="Blog" asp-action="Details" asp-route-id="@blogs.Id">@blogs.Title</a></h2>
-                                <a class="default-btn" asp-controller="Blog" asp-action="Details" asp-route-id="@blogs.Id">read more</a>
+
+                                <a href="blog-details.html">read more</a>
                             </div>
                         </div>
                     </div>

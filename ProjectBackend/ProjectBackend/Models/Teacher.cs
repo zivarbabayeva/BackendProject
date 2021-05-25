@@ -26,8 +26,8 @@ namespace ProjectBackend.Models
         [MaxLength(150)]
         public TeacherDetails TeacherDetails { get; set; }
         public TeacherSpeciality TeacherSpeciality { get; set; }
-    
-      
+
+        public Categories Categories { get; set; }
 
 
 

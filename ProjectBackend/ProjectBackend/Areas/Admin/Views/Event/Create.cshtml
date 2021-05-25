@@ -7,16 +7,52 @@
     <div class="col-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Create Course</h4>
+                <h4 class="card-title">Create Event</h4>
                 <form class="forms-sample" method="post">
                     <div class="form-group">
                         <label asp-for="Title"></label>
-                        <input asp-for="Title" class="form-control" id="exampleInputName1" placeholder="Name">
+                        <input asp-for="Title" class="form-control" id="exampleInputName1" placeholder="">
                         <span class="text-danger" asp-validation-for="Title"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Date" class="d-block"></label>
-                        <textarea asp-for="Date" id="editor"></textarea>
+                        <label asp-for="Eventdetails.ImageUrl"></label>
+                        <input asp-for="Eventdetails.ImageUrl" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="Eventdetails.ImageUrl"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Eventdetails.Date"></label>
+                        <input asp-for="Eventdetails.Date" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="Eventdetails.Date"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Eventdetails.StartTime"></label>
+                        <input asp-for="Eventdetails.StartTime" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="Eventdetails.StartTime"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Eventdetails.EndTime"></label>
+                        <input asp-for="Eventdetails.EndTime" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="Eventdetails.EndTime"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Eventdetails.Venue"></label>
+                        <input asp-for="Eventdetails.Venue" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="Eventdetails.Venue"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Eventdetails.Description"></label>
+                        <input asp-for="Eventdetails.Description" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="Eventdetails.Description"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Eventdetails.SubDescription"></label>
+                        <input asp-for="Eventdetails.SubDescription" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="Eventdetails.SubDescription"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Eventdetails.Desc"></label>
+                        <input asp-for="Eventdetails.Desc" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="Eventdetails.Desc"></span>
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <a class="btn btn-light" asp-action="Index">Cancel</a>

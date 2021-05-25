@@ -26,11 +26,14 @@ namespace ProjectBackend.Controllers
            
             Blogdetails detail = _db.Blogdetails.Include(det => det.Blog).FirstOrDefault(detail => detail.BlogId == id);
 
-
             return View(detail);
-
         }
+        public async Task<IActionResult> Search(string search)
+        {
 
+            List<Blog> blogs = await _db.Blog.Where(x => x.Title.Contains(search)).ToListAsync();
+            return View(blogs);
+        }
     }
 }
 

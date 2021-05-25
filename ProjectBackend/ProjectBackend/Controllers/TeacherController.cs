@@ -31,7 +31,12 @@ namespace ProjectBackend.Controllers
             return View(detail);
 
         }
+        public async Task<IActionResult> Search(string search)
+        {
 
+            List<Teacher> teachers = await _db.Teacher.Where(x => x.Name.Contains(search)).ToListAsync();
+            return View(teachers);
+        }
     }
     }
 

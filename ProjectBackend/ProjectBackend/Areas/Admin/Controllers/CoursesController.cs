@@ -38,7 +38,7 @@ namespace ProjectBackend.Areas.Admin.Controllers
                 ModelState.AddModelError("SubTitle", "Bu adda kurs movcuddur");
                 return View();
             }
-            await _context.CoursesOffers.AddAsync(courses);
+            await _context.AddRangeAsync(courses,courses.CourseDetails);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -103,23 +103,7 @@ namespace ProjectBackend.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        //search//
-        public async Task<IActionResult> Index(string searchString)
-        {
-            var courses = from cr in _context.CoursesOffers
-                          select cr;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                courses = courses.Where(cr => cr.SubTitle.Contains(searchString));
-            }
-            return View(await courses.ToListAsync());
-        }
-        [HttpPost]
-        public string Index(string searchString, bool notUsed)
-        {
-            return "From [HttpPost]Index: filter on " + searchString;
-        }
+       
 
 
     }

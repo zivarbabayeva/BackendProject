@@ -30,7 +30,13 @@ namespace ProjectBackend.Controllers
             return View(detail);
 
         }
-           
+        public async Task<IActionResult> Search(string search)
+        {
+
+            List<CoursesOffer> coursesOffers = await _db.CoursesOffers.Where(x=>x.SubTitle.Contains(search)).ToListAsync();
+            return View(coursesOffers);
+        }
+
         }
     }
 

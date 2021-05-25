@@ -9,15 +9,101 @@
             <div class="card-body">
                 <h4 class="card-title">Create Teacher</h4>
                 <form class="forms-sample" method="post">
+                   
                     <div class="form-group">
-                        <label asp-for="Name"></label>
-                        <input asp-for="Name" class="form-control" id="exampleInputName1" placeholder="Name">
-                        <span class="text-danger" asp-validation-for="Name"></span>
+                        <label asp-for="TeacherDetails.ImageUrl"></label>
+                        <input asp-for="TeacherDetails.ImageUrl" class="form-control" id="exampleInputName1" placeholder="">
+                        <span class="text-danger" asp-validation-for="TeacherDetails.ImageUrl"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="ImageUrl" class="d-block"></label>
-                        <textarea asp-for="ImageUrl" id="editor"></textarea>
-                        <span class="text-danger" asp-validation-for="ImageUrl"></span>
+                        <label asp-for="TeacherDetails.Name"></label>
+                        <textarea asp-for="TeacherDetails.Name" id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Qualification" class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Qualification" id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Qualification"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.AboutMe " class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.AboutMe " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.AboutMe "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Degree " class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Degree " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Degree "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Experience " class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Experience " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Experience"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Hobbies " class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Hobbies " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Hobbies"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.ContactInformation " class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.ContactInformation " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.ContactInformation"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Faculty " class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Faculty " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Faculty"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.MailMe  " class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.MailMe  " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.MailMe "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.CallNumber " class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.CallNumber  " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.CallNumber "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Skype" class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Skype  " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Skype "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Skills" class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Skills " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Skills "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Language" class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Language " id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Language "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Design" class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Design" id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Design "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.TeamLeader" class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.TeamLeader" id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.TeamLeader "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Innovation" class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Innovation" id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Innovation "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Development" class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Development" id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Development "></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeacherDetails.Communication" class="d-block"></label>
+                        <textarea asp-for="TeacherDetails.Communication" id="editor"></textarea>
+                        <span class="text-danger" asp-validation-for="TeacherDetails.Communication "></span>
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <a class="btn btn-light" asp-action="Index">Cancel</a>
